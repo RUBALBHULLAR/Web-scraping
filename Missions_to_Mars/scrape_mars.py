@@ -47,6 +47,9 @@ def scrape_all():
     
         print("news title = " , news_title.text.strip(),"\n")
         print("news paragraph = " , news_text.text.strip(),"\n------------------------------------------------------------------------------------------------------------------")
+    
+    mars['news title'] = news_title
+    mars['news paragraph'] = news_text
 
 
 # # JPL Mars Space Images - Featured Image
@@ -99,7 +102,7 @@ def scrape_all():
 # Use Base URL to obtain absolute URL
     img_url = f"https://www.jpl.nasa.gov{img_url}"
     print(img_url)
-
+    mars['img_url'] = img_url
 
 # # Space Facts-Mars
 
