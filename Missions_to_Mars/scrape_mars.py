@@ -140,8 +140,7 @@ def scrape_all():
 #Convert the data to a HTML table string
     news_titles = soup.find("table",class_="tablepress tablepress-id-p-mars")
     print(news_titles)
-
-
+    mars['mars_facts'] = news_titles
 # # Mars Hemispheres
 
 # In[165]:
@@ -180,15 +179,8 @@ def scrape_all():
     # Navigate Backwards
             browser.back()
 
-
-# In[167]:
-
-
-    hemisphere_image_urls
-
-
-# In[ ]:
-
+    mars['hemispheres'] = hemisphere_image_urls
+    return mars 
 
 
 
